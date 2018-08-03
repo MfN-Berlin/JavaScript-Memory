@@ -54,13 +54,8 @@ function startGame(nrCards){
      front.classList.add('front');
      let back = document.createElement('div');
      back.classList.add('back');
-
-     let imgEl = document.createElement('img');
-     imgEl.setAttribute('src', img);
-     imgEl.setAttribute('width', "120");
-     imgEl.setAttribute('height', "120");   
-
-     back.appendChild(imgEl);
+     back.style.backgroundImage = `url(${img})`;
+     
      grid.appendChild(card);
      card.appendChild(front);
      card.appendChild(back);

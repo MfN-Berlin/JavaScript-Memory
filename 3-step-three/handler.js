@@ -36,7 +36,7 @@ function handleClick(event){
     const selected = document.querySelectorAll('.selected');
     selected.forEach(function(card){
       card.classList.add('disabled');
-      card.classList.add('matchEnd');
+      card.classList.add('match');
       card.classList.remove('selected');
     });
     incrementCounter();
