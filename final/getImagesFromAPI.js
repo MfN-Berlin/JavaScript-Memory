@@ -7,7 +7,7 @@ function getImages(manifestUrl) {
       images = [];
       json.sequences[0].canvases.forEach((c, index) =>
         images.push({ 'name': index.toString(),
-                      'img': c.images[0].resource.service['@id'] + '/full/120,120/0/default.jpg' })
+                      'img': c.images[0].resource.service['@id'] + '/full/110,/0/default.jpg' })
                     );
       document.getElementById("loader").style.visibility = "hidden";
                     })

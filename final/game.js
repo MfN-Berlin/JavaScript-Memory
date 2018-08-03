@@ -70,29 +70,14 @@ function startGame(nrCards){
       front.classList.add('front');
       let back = document.createElement('div');
       back.classList.add('back');
+      back.style.backgroundImage = `url(${img})`; 
 
-      let imgEl = document.createElement('img');
-      imgEl.setAttribute('src', img);
-      imgEl.onload=countLoadedImages;
-
-      back.appendChild(imgEl);
       grid.appendChild(card);
       card.appendChild(front);
       card.appendChild(back);
 
     });
     grid.addEventListener('click', handleClick);
-  }
-
-  /*
-  TODO: wait until all images are loaded...
-  */
-  function countLoadedImages(){
-    imgLoadCounter++;
-    if(imgLoadCounter === numberCards){
-      imgLoadCounter = 0;
-      document.getElementById('grid').disabled = false;
-    }
   }
 
   function showHideElements() {
