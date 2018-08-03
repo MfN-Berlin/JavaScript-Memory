@@ -92,7 +92,7 @@ body {
 }
 
 .front{
-    background: url('img/KarteRueckseite.jpg') no-repeat center center / contain;
+    background: url('../img/KarteRueckseite.jpg') no-repeat center center / contain;
 }
 
 .back{
