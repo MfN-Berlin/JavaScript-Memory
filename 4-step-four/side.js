@@ -14,7 +14,7 @@ function handlePairs(element){
   }
 
  function createFoundPairElement(name){
-    let imgPath = 'img/'+name+'.jpg';
+    let imgPath = '../img/'+name+'.jpg';
     let card = document.createElement('div');
     card.className = 'sideCard';
     const cardImage = document.createElement('div');

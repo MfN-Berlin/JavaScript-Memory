@@ -4,22 +4,22 @@ var moves =  0;
 var imgLoadCounter = 0;
 
 let images = [
-  {'name': 'anglerfisch', 'img': 'img/anglerfisch.jpg',},
-  {'name': 'baumriese', 'img': 'img/baumriese.jpg',},
-  {'name': 'crewmithund', 'img': 'img/crewmithund.jpg',},
-  {'name': 'drachenfisch', 'img': 'img/drachenfisch.jpg',},
-  {'name': 'eulen', 'img': 'img/eulen.jpg',},
-  {'name': 'falke','img': 'img/falke.jpg',},
-  {'name': 'fangzahnfisch', 'img': 'img/fangzahnfisch.jpg'},
-  {'name': 'fluss', 'img': 'img/fluss.jpg'},
-  {'name': 'forschermitpinguinen', 'img': 'img/forschermitpinguinen.jpg'},
-  {'name': 'haengematte', 'img': 'img/haengematte.jpg'},
-  {'name': 'kapitaen', 'img': 'img/kapitaen.jpg',},
-  {'name': 'mast', 'img': 'img/mast.jpg'},
-  {'name': 'pflanze','img': 'img/pflanze.jpg',},
-  {'name': 'pinguine', 'img': 'img/pinguine.jpg'},
-  {'name': 'tintenfisch', 'img': 'img/tintenfisch.jpg',},
-  {'name': 'vogel', 'img': 'img/vogel.jpg'},
+  {'name': 'anglerfisch', 'img': '../img/anglerfisch.jpg',},
+  {'name': 'baumriese', 'img': '../img/baumriese.jpg',},
+  {'name': 'crewmithund', 'img': '../img/crewmithund.jpg',},
+  {'name': 'drachenfisch', 'img': '../img/drachenfisch.jpg',},
+  {'name': 'eulen', 'img': '../img/eulen.jpg',},
+  {'name': 'falke','img': '../img/falke.jpg',},
+  {'name': 'fangzahnfisch', 'img': '../img/fangzahnfisch.jpg'},
+  {'name': 'fluss', 'img': '../img/fluss.jpg'},
+  {'name': 'forschermitpinguinen', 'img': '../img/forschermitpinguinen.jpg'},
+  {'name': 'haengematte', 'img': '../img/haengematte.jpg'},
+  {'name': 'kapitaen', 'img': '../img/kapitaen.jpg',},
+  {'name': 'mast', 'img': '../img/mast.jpg'},
+  {'name': 'pflanze','img': '../img/pflanze.jpg',},
+  {'name': 'pinguine', 'img': '../img/pinguine.jpg'},
+  {'name': 'tintenfisch', 'img': '../img/tintenfisch.jpg',},
+  {'name': 'vogel', 'img': '../img/vogel.jpg'},
 ];
 
 const MANIFESTE = {
