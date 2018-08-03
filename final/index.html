@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Memory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+  <script src="handler.js"></script>
+  <script src="side.js"></script>
+  <script src="end.js"></script>
+  <script src="getImagesFromAPI.js"></script>
+  <script src="game.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <div>
+      <p class='p3'> &#183 Museum für Naturkunde &#183</style></p>
+      <p class='p5'>Memory</p>
+    </div>
+    <div id="timerDisplay" class="p2"></div>
+    <div id="movesDisplay" class="p2"></div>
+    <form id=select_image_set>
+      Mit welchen Bildern willst du spielen?<br>
+      <input type="radio" name="image_set" id="insects" onclick = "setManifest('insekten')" checked>Insekten
+      <input type="radio" name="image_set" id="molluscs" onclick = "setManifest('mollusken')">Mollusken
+      <input type="radio" name="image_set" id="minerals" onclick = "setManifest('mineralien')">Mineralien
+      <input type="radio" name="image_set" id="ehrenberg" onclick = "setManifest('ehrenberg')">Ehrenberg zeichnungen
+    </form>
+
+    <div align='center'>
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <div>
+        <button class="buttonNrCards" id="buttonNrCards6" onClick="startGame(6)"> 6 Kartenpaare</button>
+    </div>
+
+
+    <div id="game">
+      <div id="grid" ></div>
+      <div id="side" >
+          <p class="p2">Paare</p>
+        </div>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+          <h1 class="p3">Gewonnen! 🎉</h1>
+          <div class="result">
+            <p class="p2">Du hast <span id=finalMove> </span> Züge und
+              <span id=finalTime> </span> Sekunden gebraucht.
+            </p>
+            <p class="p3">
+              <span id=starRating></span>
+            </p>
+          </div>
+        </div>
+        <div>
+            <button class="restartButton" value="restart" onClick= "window.location.reload()">Neu starten</button>
+        </div>
+      </div>
+
+  </div>
+</body>
+</html>
