@@ -20,7 +20,7 @@ Unterstützt durch:
 
 [Einführung](##Einführung) 
 
-[Spiel starten](##1. Spiel starten)
+[Spiel starten](##Spiel starten)
 
 
 
@@ -69,7 +69,7 @@ Zu jedem Kapitel gibt es einen Ordner, begonnen wird mit _step-one_. Das Ergebni
 <div class="page"/>
 
 
-## 1. Spiel starten
+##Spiel starten
 _Ordner: step-one_
 
 *Ziel:*  
