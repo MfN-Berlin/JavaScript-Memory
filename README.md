@@ -18,11 +18,6 @@ Die [Mediasphere For Nature](https://www.museumfuernaturkunde.berlin/de/forschun
 Unterstützt durch:  
 <img src="eu_efre_zusatz_unten_rgb.jpg" alt="EFRE Logo" width="200px"/>
 
-[Einführung](##Einführung) 
-
-[Spiel starten](##Spiel starten)
-
-
 
 
 <div class="page"/>
@@ -69,7 +64,7 @@ Zu jedem Kapitel gibt es einen Ordner, begonnen wird mit _step-one_. Das Ergebni
 <div class="page"/>
 
 
-##Spiel starten
+## 1. Spiel starten
 _Ordner: step-one_
 
 *Ziel:*  
