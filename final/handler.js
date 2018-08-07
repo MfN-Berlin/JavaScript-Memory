@@ -26,7 +26,7 @@ function handleClick(event){
             match();
             incrementPairs();
             let imgPath = getImagePathFromBackground(selectedElement);
-            handlePairs(selectedElement.nextElementSibling.children[0].src)
+            handlePairs(imgPath);
             return;
         }
         setTimeout(resetGuesses, 1000);

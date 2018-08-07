@@ -13,7 +13,7 @@ function handlePairs(element){
     parent.appendChild(card);
   }
 
- function createFoundPairElement(imgPath){    
+ function createFoundPairElement(imgPath){   
     let card = document.createElement('div');
     card.className = 'sideCard';
     const cardImage = document.createElement('div');
