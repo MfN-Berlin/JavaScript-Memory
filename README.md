@@ -2,8 +2,18 @@
 
 
 
+
+
+
+
+
+
 Ein Projekt der  
+
+
 <img src="Logo_Mediasphere.png" alt="Mediasphere for nature" width="200px" />
+
+Die Mediasphere For Nature ist aus dem EFRE-geförderten Projekt „Naturkunde 365/24 – Multimediales Applikationslabor des Berliner Naturkundemuseums“ hervorgegangen. Mit ihren Angeboten ebnet sie den Weg für Kooperationen von kleinen und mittelständischen Unternehmen (KMU) aus dem Berliner Raum mit dem Museum und erschafft damit eine Brücke zwischen Forschung und Wirtschaft. Neben dem Expertenwissen der ForscherInnen des Hauses sowie Vernetzungs- und Informationsangeboten erhalten die KMU exklusiven Zugang zum bedeutenden Wissensbestand an digitalen Inhalten. Das Museum für Naturkunde Berlin wird damit zu einer Anlaufstelle für die Entwicklung von wissensbasierten Produkt- und Service-Innovationen für Natur und Gesellschaft.
 
 Unterstützt durch:  
 <img src="eu_efre_zusatz_unten_rgb.jpg" alt="EFRE Logo" width="200px"/>
@@ -13,7 +23,7 @@ Unterstützt durch:
 
 ## Einführung
 
-Im Rahmen des Projekts **„Naturkunde 364/24“** des **Museums für Naturkunde Berlin** entsteht die Broschüren-Reihe „Hacking the Museum“, in welcher Grundlagen unterschiedlicher Programmiersprachen vermittelt werden. Unter anderem wird gezeigt, wie Anfragen an die API des **Rechercheportals „Mediasphere for Nature“** gestellt werden, um hauseigenen Medien des Museums abzufragen.
+Im Rahmen des Projekts **„Naturkunde 365/24“** des **Museums für Naturkunde Berlin** entsteht die Broschüren-Reihe „Hacking the Museum“, in welcher Grundlagen unterschiedlicher Programmiersprachen vermittelt werden. Unter anderem wird gezeigt, wie Anfragen an die API des **Rechercheportals** gestellt werden, um hauseigenen Medien des Museums abzufragen.
 
 
 Anhand eines **Memory-Spiels** wird ein Einblick in die Verwendung von **JavaScript** gegeben.
@@ -40,6 +50,8 @@ Begleitend zu dieser Broschüre gibt es ein **Repository** auf **GitHub**. Das R
 heruntergeladen werden. Wer sich mit Git auskennt kann es natürlich auch klonen oder einen fork erstellen.
 
 Zu jedem Kapitel gibt es einen Ordner, begonnen wird mit _step-one_. Das Ergebnis aus dem ersten Kapitel ist dann im Ordner _step-two_, der als Anfang für das zweite Kapitel dient, zu sehen. Aber im besten Fall, wird der nicht benötigt. 
+
+<div class="page"/>
 
 
 #### Links
