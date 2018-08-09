@@ -353,7 +353,7 @@ function handleClick(event){
         selectedElement.parentNode.classList.add('selected');
         selectedCards++;
     }
-    else if(selectedCards ==2){
+    if(selectedCards ==2){
         setTimeout(resetGuesses, 1500);
     }
   }
