@@ -407,7 +407,7 @@ function handleClick(event){
         selectedCards.push(event.target);
         selectedElement.parentNode.classList.add('selected');
     }
-    else if(selectedCards.length ==2){
+    if(selectedCards.length ==2){
         if(selectedCards[0].parentNode.dataset.name === selectedCards[1].parentNode.dataset.name){
             setTimeout(match, 1000);
             return;
