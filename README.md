@@ -49,7 +49,7 @@ Die meisten Browser bieten Entwicklertools an, bei Firefox und Chrome kann man d
   document.getElementsByClassName('container')[0].style.backgroundColor = 'blue'
 ```
 
-Nach Betätigung der Enter-Taste wird ein Teil des weissen Hintergrunds Blau angezeigt. Die Änderung ist nur Temporär in deinem Browser zu sehen.
+Nach Betätigung der Enter-Taste wird ein Teil des weißen Hintergrunds Blau angezeigt. Die Änderung ist nur Temporär in deinem Browser zu sehen.
 
 Ein weiterer Tab enthält den *Debugger*, verhält sich der Code nicht wie erwartet, kann er Schritt für Schritt ausgeführt werden und die Werte der verwendeten Variablen lassen sich inspizieren. Um an den Code an einer bestimmten Stelle anzuhalten, schreibt man das Schlüsselwort *debugger* in das Script.
 
@@ -227,7 +227,7 @@ Zugegeben, es ist hier ein bisschen verwirrend, dass das _div_ der Klasse _back_
 
 <div class="page"/>
 
-> __dataset Attribute__
+> __*Info:* dataset Attribute__
 >
 > Durch _card.dataset.name_ wird dem HTML-Element ein individuelles Attribut angehängt. Informationen die nicht dargestellt werden sollen, können so JavaScript und CSS zur Verfügung
 > gestellt werden. In HTML müssen diese Attribute mit **data-** beginnen und dürfen nur aus Kleinbuchstaben bestehen. Die Anzahl der Attribute ist beliebig.
@@ -288,7 +288,7 @@ Die Funktion _addEventListener_ erwartet zwei Parameter, einen String, der den T
 _() => console.log('click')_ ist eine **Pfeilfunktion** und äquivalent zu _function printClick() {console.log('click')}_
 
  >
- > **EventListener**  
+ > **_Info:_ EventListener**  
  > Aus HTML ist eventuell das _onClick_ Event Attribut bekannt. Mit diesem lässt sich festlegen, was passieren soll, wenn das Element
  > angeklickt wird. Das Anklicken wird als _Event_ bezeichnet, es gibt eine Reihe an Events unterschiedlicher Kategorien. Mit der
  > _addEventListener_ Funktion lassen sich mit JavaScript EventListener nachträglich an selektierte oder neu erstellte Elemente anfügen.   
@@ -686,7 +686,7 @@ Hier wird die JavaScript Library jQuery mittels _fetch_ geholt und in der Konsol
 
 <div class="page"/>
 
->__Promises__  
+>__*Info:* Promises__  
  > Promises werden für asynchrone Berechnung/Operation eingesetzt. Sie können sich in einem der folgenden Zustände befinden:
 > * _pending:_ Initialer Status, Berechnung/Operation ist noch nicht fertig gestellt.
 > * _fulfilled:_ Berechnung/Operation erfolgreich abgeschlossen
@@ -699,13 +699,12 @@ Hier wird die JavaScript Library jQuery mittels _fetch_ geholt und in der Konsol
 
 Das Museum für Naturkunde, Berlin arbeitet daran die digitalen Medien der Sammlung zur Verfügung zu stellen. Für die Bilder wird das IIIF Framework verwendet, welches von diversen Bibliotheken entwickelt wurde. Wikipedia beschreibt es folgendermaßen:
 
->
-> Das International Interoperability Framework(IIIF) besteht aus zwei APIs.
->
->  *  Die _Image API_ definiert einen Web-Service zur Ausgabe von Bildern, zum Beispiel Format, Ausgabegröße und Zoomstufen, Ausschnitte, Farbtiefe und Rotation.
->  *  Die _Presentation API_ beschreibt die Ausgabe eines Objektes mit seinen bibliographischen und strukturellen Metadaten. Der Output erfolgt als JSON-LD-Objekte. Die Ausgabe der
-> Images gemäß der _Image API_ ist integriert.
->
+ "Das International Interoperability Framework(IIIF) besteht aus zwei APIs.
+
+  *  Die _Image API_ definiert einen Web-Service zur Ausgabe von Bildern, zum Beispiel Format, Ausgabegröße und Zoomstufen, Ausschnitte, Farbtiefe und Rotation.
+  *  Die _Presentation API_ beschreibt die Ausgabe eines Objektes mit seinen bibliographischen und strukturellen Metadaten. Der Output erfolgt als JSON-LD-Objekte. Die Ausgabe der
+ Images gemäß der _Image API_ ist integriert."
+
 
 Um ein einzelnes Bild über die _Image API_ anzufordern muss folgende Syntax eingehalten werden:
 
