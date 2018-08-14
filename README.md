@@ -49,7 +49,7 @@ Die meisten Browser bieten Entwicklertools an, bei Firefox und Chrome kann man d
   document.getElementsByClassName('container')[0].style.backgroundColor = 'blue'
 ```
 
-Nach Betätigung der Enter-Taste wirdein Teil des weissen Hintergrunds Blau angezeigt. Die Änderung ist nur Temporär in deinem Browser zu sehen.
+Nach Betätigung der Enter-Taste wird ein Teil des weissen Hintergrunds Blau angezeigt. Die Änderung ist nur Temporär in deinem Browser zu sehen.
 
 Ein weiterer Tab enthält den *Debugger*, verhält sich der Code nicht wie erwartet, kann er Schritt für Schritt ausgeführt werden und die Werte der verwendeten Variablen lassen sich inspizieren. Um an den Code an einer bestimmten Stelle anzuhalten, schreibt man das Schlüsselwort *debugger* in das Script.
 
