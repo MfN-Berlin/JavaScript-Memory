@@ -2,29 +2,18 @@
 
 
 
-
-
-
-
-
-
 Ein Projekt der  
-
-
 <img src="Logo_Mediasphere.png" alt="Mediasphere for nature" width="200px" />
-
-Die [Mediasphere For Nature](https://www.museumfuernaturkunde.berlin/de/forschung/forschungsbereiche/digitale-welt-und-informationswissenschaft/mediasphere-nature) ist aus dem EFRE-geförderten Projekt „Naturkunde 365/24 – Multimediales Applikationslabor des Berliner Naturkundemuseums“ hervorgegangen. Mit ihren Angeboten ebnet sie den Weg für Kooperationen von kleinen und mittelständischen Unternehmen (KMU) aus dem Berliner Raum mit dem Museum und erschafft damit eine Brücke zwischen Forschung und Wirtschaft. Neben dem Expertenwissen der ForscherInnen des Hauses sowie Vernetzungs- und Informationsangeboten erhalten die KMU exklusiven Zugang zum bedeutenden Wissensbestand an digitalen Inhalten. Das Museum für Naturkunde Berlin wird damit zu einer Anlaufstelle für die Entwicklung von wissensbasierten Produkt- und Service-Innovationen für Natur und Gesellschaft.
 
 Unterstützt durch:  
 <img src="eu_efre_zusatz_unten_rgb.jpg" alt="EFRE Logo" width="200px"/>
-
 
 
 <div class="page"/>
 
 ## Einführung
 
-Im Rahmen des Projekts **„Naturkunde 365/24“** des **Museums für Naturkunde Berlin** entsteht die Broschüren-Reihe „Hacking the Museum“, in welcher Grundlagen unterschiedlicher Programmiersprachen vermittelt werden. Unter anderem wird gezeigt, wie Anfragen an die API des **Rechercheportals** gestellt werden, um hauseigenen Medien des Museums abzufragen.
+Im Rahmen des Projekts **„Naturkunde 365/24“** des **Museums für Naturkunde Berlin** entsteht die Broschüren-Reihe „Hacking the Museum“, in welcher Grundlagen unterschiedlicher Programmiersprachen vermittelt werden. Unter anderem wird gezeigt, wie Anfragen an die API des **Rechercheportals „Mediasphere for Nature“** gestellt werden, um hauseigene Medien des Museums abzufragen.
 
 
 Anhand eines **Memory-Spiels** wird ein Einblick in die Verwendung von **JavaScript** gegeben.
@@ -47,17 +36,34 @@ Grundlegende Kenntnisse von **HTML** und **CSS** sollten vorhanden sein, da dies
 
 Kontrollstrukturen wie _if-else_ und _for_ sowie die Verwendung von _Variablen_ und _Funktionen_ sollten auch bekannt sein.
 
-Begleitend zu dieser Broschüre gibt es ein **Repository** auf **GitHub**. Das Repository kann von  https://github.com/MfN-Berlin/JavaScript-Memory
-heruntergeladen werden. Wer sich mit Git auskennt kann es natürlich auch klonen oder einen fork erstellen.
+Begleitend zu dieser Broschüre gibt es ein **Repository** auf **GitHub**. Das Repository kann von    https://github.com/MfN-Berlin/JavaScript-Memory   
+heruntergeladen werden. Wer sich mit Git auskennt kann auch einen fork erstellen.
 
-Zu jedem Kapitel gibt es einen Ordner, begonnen wird mit _step-one_. Das Ergebnis aus dem ersten Kapitel ist dann im Ordner _step-two_, der als Anfang für das zweite Kapitel dient, zu sehen. Aber im besten Fall, wird der nicht benötigt. 
+Zu jedem Kapitel gibt es einen Ordner, begonnen wird mit _step-one_. Das Ergebnis aus dem ersten Kapitel ist dann im Ordner _step-two_, der als Anfang für das zweite Kapitel dient, zu sehen. Aber im besten Fall, wird der nicht benötigt.
+
+### Die JavaScript-Konsole und der Debugger
+
+Die meisten Browser bieten Entwicklertools an, bei Firefox und Chrome kann man diese mit der Taste F12 öffnen. Der *Inspektor* bzw. unter dem Tab *Elements* wird das HTML angezeigt. Klickt man auf eins dieser Elemente, werden auch die zugehörigen CSS-Regeln angezeigt. Diese können nun auch direkt modifiziert und die Änderungen begutachtet werden. Unter dem Tab *Konsole* ist die JavaScript Konsole zu finden. Hier werden Warnungen und Fehlermeldungen angezeigt. Auch die Ausgaben des Befehls _console.log()_ sind hier zu sehen. Vor allem, können ganz unten Befehle direkt eingegeben und ausgeführt werden. Bei Firefox ist die Eingabeaufforderung durch zwei schließende spitze Klammern (*>>*) gekennzeichnet, bei Chrome durch nur eine (*>*).   Die Konsole ist gut geeignet, kleine Codeschnipsel schnell mal auszuprobieren und bietet außerdem _Code Completion_. Auch über JavaScript lassen sich HTML-Elemente bearbeiten. Ruf die Startseite von *ecosia.org*, öffne die Konsole und gib folgenden Befehl ein:
+
+```javascript
+  document.getElementsByClassName('container')[0].style.backgroundColor = 'blue'
+```
+
+Nach Betätigung der Enter-Taste wirdein Teil des weissen Hintergrunds Blau angezeigt. Die Änderung ist nur Temporär in deinem Browser zu sehen.
+
+Ein weiterer Tab enthält den *Debugger*, verhält sich der Code nicht wie erwartet, kann er Schritt für Schritt ausgeführt werden und die Werte der verwendeten Variablen lassen sich inspizieren. Um an den Code an einer bestimmten Stelle anzuhalten, schreibt man das Schlüsselwort *debugger* in das Script.
+
+All dies sind sehr nützliche Werkzeuge die das Lernen und die Arbeit erleichtern und Spaß machen - es lohnt sich also, ein paar Minuten zu investieren und in die Dokumentation deines Browsers zu schauen.
+
+
 
 <div class="page"/>
-
 
 #### Links
 * https://www.w3schools.com
 * https://git-scm.com/book/de/v2
+* https://developer.mozilla.org/en-US/docs/Tools
+* https://developers.google.com/web/tools/chrome-devtools/
 
 ---
 
@@ -84,11 +90,11 @@ Die Funktion wird in der Datei _game.js_ implementiert, die im selben Verzeichni
 ```
 
 
-So soll der Fensterinhalt nach dem Klick auf den Button aussehen:
+Am Ende des Kapitels soll der Fensterinhalt nach dem Klick auf den Button so aussehen:
 
 ![Alt-Text](übersicht.png)
 
-Der Button ist weg, hinzugekommen ist eine Anzeige für die Zeit und die Züge sowie die _verdeckten_ Karten.
+Der Button soll weg und eine Anzeige für die Zeit und die Züge sowie die _verdeckten_ Karten sind zu sehen.
 
 <div class="page"/>
 
@@ -197,10 +203,10 @@ Um es so aussehen zu lassen, als ob die Karten gedreht werden, werden die CSS Ei
 
       let front = document.createElement('div');
       front.classList.add('front');
-      
+
       let back = document.createElement('div');
       back.classList.add('back');
-      back.style.backgroundImage = `url(${img})`; 
+      back.style.backgroundImage = `url(${img})`;
 
       grid.appendChild(card);
       card.appendChild(front);
@@ -209,6 +215,13 @@ Um es so aussehen zu lassen, als ob die Karten gedreht werden, werden die CSS Ei
     });
 }
 ```
+
+Achtung bei der Zeile
+```javascript
+back.style.backgroundImage = `url(${img})`;
+```
+Hier handelt es sich um _template litrerals_. Der Wert der Variablen _img_ wird über das $-Zeichen in den String integriert. Wichtig ist die Verwendung der Backticks (die Taste für die Accent grave Zeichen, links des Fragezeichens).
+
 
 Zugegeben, es ist hier ein bisschen verwirrend, dass das _div_ der Klasse _back_ das Bild als Hintergrund gesetzt wird - das ist historisch gewachsen ;-)
 
@@ -276,7 +289,7 @@ _() => console.log('click')_ ist eine **Pfeilfunktion** und äquivalent zu _func
 
  >
  > **EventListener**  
- > Aus HTML ist eventuell das _onClick_ Event Attribut bekannt. Mit diesem lässt sich festlegen, was passieren soll, wenn das Element 
+ > Aus HTML ist eventuell das _onClick_ Event Attribut bekannt. Mit diesem lässt sich festlegen, was passieren soll, wenn das Element
  > angeklickt wird. Das Anklicken wird als _Event_ bezeichnet, es gibt eine Reihe an Events unterschiedlicher Kategorien. Mit der
  > _addEventListener_ Funktion lassen sich mit JavaScript EventListener nachträglich an selektierte oder neu erstellte Elemente anfügen.   
  >
@@ -284,32 +297,34 @@ _() => console.log('click')_ ist eine **Pfeilfunktion** und äquivalent zu _func
  > _addEventListener(type, listener);_   
  >
  >* _type_ ist ein String der die Art des Events angibt  
- > * _listener_ ist die Funktion die aufgerufen werden soll, wenn dieses Event eintrifft. Als Parameter 
- wird bei Aufruf ein _Event_-Objekt übergeben. 
- > 
+ > * _listener_ ist die Funktion die aufgerufen werden soll, wenn dieses Event eintrifft. Als Parameter
+ wird beim Aufruf ein _Event_-Objekt übergeben.
+ >
  > Dadurch ermöglicht JavaScript auf bestimmte Aktionen des Nutzers reagieren zu können und das HTML dynamisch zu verändern.
- > 
+ >
  > **Bubbling**  
- > Als _Bubbling_ bezeichnet man die Tatsache, dass, wenn eine Aktion auf einem Element ausgeführt wird, zunächst der ihm zugeordnete Listener aufgerufen wird, anschließend der des darüberliegenden Elements und so weiter bis hinauf zum _body_-Element. Das Element auf dem das Event tatsächlich ausgeführt wurde, kann über _event.target_ abgefragt werden. 
+ > Als _Bubbling_ bezeichnet man die Tatsache, dass, wenn eine Aktion auf einem Element ausgeführt wird, zunächst der ihm zugeordnete Listener aufgerufen wird, anschließend - falls vorhanden -  der des darüberliegenden Elements und so weiter bis hinauf zum _body_-Element. Das Element auf dem das Event tatsächlich ausgeführt wurde, kann über _event.target_ abgefragt werden.
 
 <div class="page"/>
 
 ### Karten umdrehen
 
-Um eine Karte _umzudrehen_, wird dieser eine neue CSS-Klasse zugewiesen:
+Unsere JavaScript Datei ist bereits gut gewachsen. Um das Projekt übersichtlich zu gestalten, wird eine neue Datei erstellt, _handler.js_. Diese neue Datei muss auch in der _index.html_ referenziert werden. Der Code wird in der Reihenfolge ausgeführt, in der die Script-Elemente im HTML auftauchen. Bisher wird nach dem Laden kein Code direkt aufgerufen, sondern erst beim anklicken des Buttons. Es ist aber wichtig, dies im Hinterkopf zu behalten da es _Reference Errors_ auslösen kann, die darauf Hinweisen, dass Variablen oder Funktionen verwendet werden sollen, die noch nicht deklariert, bzw. definiert sind.
+
+
+In die neue Datei kommt zunächst folgende Funktion:
 
 ```javascript
  function handleClick(event){
     event.target.parentNode.classList.add('selected');
   }
 ```
-Die Animation ist im CSS dem übergeordneten _div_ zugeordnet, daher muss über _parentNode_ dessen Klassenliste um _selected_ erweitert werden.
 
-Damit die _game.js_ nicht zu unübersichtlich wird, implementieren wir die Funktion _handleClick_ in einer neuen Datei mit dem Namen _handler.js_.
+Als Parameter wird das _Event_-Objekt erwartet, das Informationen über das DOM-Element enthält, das angeklickt wurde. Da die Animation dem übergeordneten _div_ zugeordnet ist, wird mittles _parentNode_ dessen Klassenliste um _selected_ erweitert.
 
-Anstelle der Pfeilfunktion wird nun die Funktion _handleClick_ vom _eventListener_ aufgerufen.
+Anstelle der Pfeilfunktion wird nun die Funktion _handleClick_ vom _eventListener_ in der _game.js_ aufgerufen.
 
-Um sicherszustellen, dass nur zwei Karten angeklickt werden, wird eine neue globale Variable _selectedCards_ erstellt und mit _0_ initialisiert. Die _handleClick_ wird um eine if-Abfrage erweitert, sodass die CSS-Klasse nur gesetzt wird, wenn die Anzahl der ausgewählten Karten kleiner zwei ist:
+Um sicherzustellen, dass nur zwei Karten angeklickt werden, deklarieren wir eine neue globale Variable _selectedCards_ erstellt und mit _0_ initialisiert. Die _handleClick_ wird um eine if-Abfrage erweitert, sodass die CSS-Klasse nur gesetzt wird, wenn die Anzahl der ausgewählten Karten kleiner zwei ist:
 
 ```javascript
  function handleClick(event){
@@ -325,15 +340,20 @@ Die Signatur der Funktion sieht so aus:
 
 _setTimeout(function, milliseconds);_
 
+Nach der angegebenen Zeit in Millisekunden wird die übergebene Funktion aufgerufen.   
+**Achtung:** Als Parameter wird nur der Name der Funktion übergeben, die runden Klammern würden einen sofortigen Aufruf der Funktion bedeuten. Soll die Funktion mit einem bestimmten Parameter aufgerufen werden, muss der Aufruf in einer weiteren Funktion gekapselt werden:
+
+
+
 Ausprobieren kann man das auch in der JavaScript Konsole des Browsers, in Chrome und Firefox wird sie mit F12 geöffnet und dann der Tab Konsole gewählt.
-
-Nach der angegebenen Zeit in Millisekunden wird die übergebene Funktion aufgerufen.
-
-Um nach 1.5 Sekunden ein PopUp mit dem Inhalt _Hallo Welt_ im Browser zu öffnen, kann folgender Befehl in die JavaScript-Konsole eingegeben werden:
 
 ```javascript
   setTimeout(() => alert('Hallo Welt'), 1500);
 ```
+
+Hier wird nach 1.5 Sekunden ein PopUp mit dem Inhalt _Hallo Welt_ im Browser geöffnet. Die Funktion _alert_ wird mit _"Hallo Welt"_  als Parameter aufgerufen.
+
+Dieses Beispiel lässt sich ganz leicht in der JavaScript Konsole eines Browsers testen.
 
 Damit die Karten wieder umgedreht werden, muss das CSS nach einer gewissen Zeit wieder geändert werden. Zunächst werden alle Elemente mit der Klasse _selected_ gewählt, um dann von jedem dieser Elemente genau diese Klasse zu entfernen:
 
@@ -372,25 +392,9 @@ Bei der Gelegenheit wird auch gleich überprüft, ob das Element über die CSS-K
 
 ### Paare finden
 
-Um die beiden gewählten Karten vergleichen zu können, werden die Elemente in ein Array gespeichert. Dazu wandeln wir die Variable _selectedCards_ in ein leeres Array um. In der _handleClick_ Funktion wird das Element diesem Array hinzugefügt. Somit können bei zwei Karten die Namen aus dem Dataset verglichen werden.
-Sind sie gleich, wird die Methode _match()_ nach einer Sekunde aufgerufen. _match()_ macht nichts weiter als den beiden selektierten Karten neue CSS-Klassen zuzuordnen und das Array zurück zu setzen.
+Um die beiden gewählten Karten vergleichen zu können, werden die Elemente in ein Array gespeichert. Dazu wandeln wir die Variable _selectedCards_ in ein leeres Array um. Auch zu beginn der Funktion _resetGuesses_ wird die Variable _selectedCards_ nun auf ein leeres Array anstatt auf 0 gesetzt.
 
-<div class="page"/>
-
-
-```javascript
-  function match(){
-    selectedCards = [];
-    const selected = document.querySelectorAll('.selected');
-    selected.forEach(function(card){
-      card.classList.add('disabled');
-      card.classList.add('match');
-      card.classList.remove('selected');
-    });
-  };
-```
-
-Und so sieht die erweiterte _handleClick_-Funktion aus:
+In der _handleClick_ Funktion wird das Element diesem Array hinzugefügt. Somit können bei zwei Karten die Namen aus dem Dataset verglichen werden. Sind sie gleich, wird die Methode _match()_ nach einer Sekunde aufgerufen:
 
 ```javascript
 var selectedCards = [];
@@ -407,6 +411,7 @@ function handleClick(event){
         selectedCards.push(event.target);
         selectedElement.parentNode.classList.add('selected');
     }
+
     if(selectedCards.length ==2){
         if(selectedCards[0].parentNode.dataset.name === selectedCards[1].parentNode.dataset.name){
             setTimeout(match, 1000);
@@ -416,6 +421,24 @@ function handleClick(event){
     }
   }
 ```
+
+ _match()_ macht nichts weiter als den beiden selektierten Karten neue CSS-Klassen zuzuordnen und das Array zurück zu setzen.
+
+<div class="page"/>
+
+
+```javascript
+  function match(){
+    selectedCards = [];
+    const selected = document.querySelectorAll('.selected');
+    selected.forEach(function(card){
+      card.classList.add('disabled');
+      card.classList.add('match');
+      card.classList.remove('selected');
+    });
+  };
+```
+
 
 ### Züge und Zeit zählen  
 Um die Züge zu zählen, wird eine globale Variable _moves_ erstellt und eine Funktion implementiert, die diese hochzählt und ausgibt. Innerhalb der _match_ und _resetGuesses_ Funktion wird _incrementCounter_ aufgerufen.
@@ -434,17 +457,23 @@ Wie _setTimeout_ übergibt man eine Funktion und die Intervalldauer in Milliseku
 
 In unserem Fall soll die Funktion jede Sekunde ausgeführt werden und dann die Zeit seit dem ersten Klick auf das Spielfeld zählen. Zunächst deklarieren wir zwei weitere globale Variablen namens _startTime_ und _intervalId_ die je auf _undefined_ gesetzt werden. An den Beginn der _handleClick_-Funktion kommt eine _if_-Abfrage. Ist _startTime_ _undefined_, so soll sie initial auf die aktuelle Zeit gesetzt werden. Diese holt man über ein neues _Date_-Objekt und der Funktion _getTime()_, welche die Anzahl an Millisekunden seit dem 1.1.1970 zurückgibt.
 
+Hier der Anfang der geänderten _handleClick_:
+
 ```javascript
 function handleClick(event){
-    if(startTime === undefined){
-        startTime = new Date().getTime();
-        intervalId = setInterval(calculateTime , 1000);
-    }
-    ...
-}
+  if(startTime === undefined){
+    startTime = new Date().getTime();
+    intervalId = setInterval(calculateTime , 1000);
+  }
+
+  var selectedElement = event.target;
+
+  if(selectedElement.id === 'grid' ||
+    selectedElement.parentNode.classList.contains('selected')){
+  ...  
 ```
 
-In _calculateTime_ wird über ein weiteres _Date_-Objekt die aktuelle Zeit geholt und die Differenz zwischen zur Startzeit bestimmt. Um auch Minuten anzuzeigen, wird die vergangene Zeit durch 60 dividiert und mit _Math.floor()_ abgerundet. Die Sekunden werden mithilfe des Modulo-Operators bestimmt und beides anschließend in das entsprechende HTML-Element geschrieben.
+Für _calculateTime_ wird eine globale Variable _elapsed_ benötigt. Innerhalb der Funktion wird durch ein weiteres _Date_-Objekt die aktuelle Zeit geholt und die Differenz zur Startzeit bestimmt. Um auch Minuten anzuzeigen, wird die vergangene Zeit durch 60 dividiert und mit _Math.floor()_ abgerundet. Die Sekunden werden mithilfe des Modulo-Operators bestimmt und beides anschließend in das entsprechende HTML-Element geschrieben.
 
 ```javascript
   function calculateTime(){
@@ -460,6 +489,7 @@ In _calculateTime_ wird über ein weiteres _Date_-Objekt die aktuelle Zeit gehol
         document.getElementById('timerDisplay').innerHTML= "Benötigte Zeit: "+ min +" Minute(n) und " + sec + " Sekunden";
   }
 ```
+
 
 Sind alle Paare gefunden, soll _calculateTime_ nicht mehr aufgerufen werden. Eine weitere globale Variable _pairs_ speichert die Anzahl an gefundenen Paaren. Eine neue Funktion _incrementPairs_ überprüft, ob sie gleich der Anzahl an Paaren ist und ruft dann _clearInterval_ mit der ID auf. Die neu implementierte Funktion wird innerhalb der _if_-Abfrage aufgerufen, in der geprüft wird, ob die beiden selektierten Karten die gleichen sind.
 
@@ -518,7 +548,9 @@ Wurde ein Paar gefunden, soll es jetzt nicht mehr auf dem Spielfeld liegen bleib
 
 ![Alt-Text](side.png)
 
-Beim ersten gefundenen Paar, soll das _div_ um ein weiteres _div_ (weiterführend auch in diesem Code-Abschnitt _Container_ genannt) erweitert werden. An diesen _Container_ werden die Bilder der nächsten drei gefundenen Paare angehängt. Das wird in der Funktion _handlePairs_ implementiert. Zunächt wird das _div_ mit der Id _side_ selektiert. Je nachdem wieviele Paare bereits gefunden wurden, wird ein neuer _Container_ erstellt, oder der letzte, bereits bestehende selektiert. Dann wird die Funktion _createFoundPairElement(name)_ aufgerufen und das zurückgegebene Element dem letzten bestehenden Bild angehängt. Dazu wird eine weitere Funktion _getLastChild(container)_ aufgerufen.
+Beim ersten gefundenen Paar, soll das _div_ um ein weiteres _div_ (weiterführend in diesem Code-Abschnitt _Container_ genannt) erweitert werden. An diesen _Container_ werden die Bilder der nächsten drei gefundenen Paare angehängt. Das wird in der Funktion _handlePairs_ implementiert. Zunächt wird das _div_ mit der Id _side_ selektiert. Je nachdem wieviele Paare bereits gefunden wurden, wird ein neuer _Container_ erstellt, oder der letzte, bereits bestehende selektiert. Dann wird die Funktion _createFoundPairElement(name)_ aufgerufen und das zurückgegebene Element dem letzten bestehenden Bild angehängt. Dazu wird eine weitere Funktion _getLastChild(container)_ aufgerufen.
+
+Diese neuen Funktionen werden zusammen in einer neuen Datei mit dem Namen _side.js_ implementiert.
 
  ```javascript
  function handlePairs(clicked){
@@ -537,8 +569,7 @@ Beim ersten gefundenen Paar, soll das _div_ um ein weiteres _div_ (weiterführen
   }
   ```
 
-  _createFoundPairElement(name)_ erstellt ähnlich wie _dealCards_ ein neues _div_ mit dem Bild des gefundenen Paar.
-
+  _createFoundPairElement(name)_ erstellt - ähnlich wie _dealCards_ - ein neues _div_ mit dem Bild des gefundenen Paar.
 
   ```javascript
    function createFoundPairElement(name){
@@ -564,21 +595,17 @@ Beim ersten gefundenen Paar, soll das _div_ um ein weiteres _div_ (weiterführen
   }
   ```
 
-  Diese drei Funktionen kommen der übersicht halber wieder in eine extra Datei, _handler.js_.
-
-  Aufgerufen wird _handlePairs_ nach der _match_ Funktion in _handleClick_. Die Bilder auf der Seite sollen auch nicht sofort erscheinen um einen schöneren Übergang zu erhalten. Daher wird wieder ein _setTimeout_ verwendet. Der Aufruf sieht diesmal anders aus:
+  Aufgerufen wird _handlePairs_ nach der _match_ Funktion in _handleClick_:
 
 
  ```javascript
-function handleClick(event){
 ...
     if(selectedCards.length === 2){
         if(selectedCards[0].parentNode.dataset.name === selectedCards[1].parentNode.dataset.name){
-            setTimeout(match, 1000);
-            incrementPairs();
+            setTimeout(match, 1000);            
             handlePairs(selectedElement);
+            incrementPairs();
 ...
-  }
  ```
 
 <div class="page"/>
@@ -606,7 +633,7 @@ Wenn alle paare gefunden sind, soll eine neue Anzeige mit der Zeit und einem Ran
       </div>
 ```
 
-Eine Funktion _endGame_ macht die Elemente sichtbar und fügt die Zeit und Züge ein. Abhängig von der Anzahl der Karten und der Züge gibt es 'Punkte'.
+Eine Funktion _endGame_ macht die Elemente sichtbar und fügt die Zeit und Züge ein. Abhängig von der Anzahl der Karten und der Züge gibt es bis zu drei Sterne.
 
 ```javascript
 function endGame(){
@@ -614,14 +641,15 @@ function endGame(){
     modal.classList.add("show");
 
     document.getElementById("finalMove").innerHTML = moves;
-    document.getElementById("finalTime").innerHTML = elapsedTime;
+    document.getElementById("finalTime").innerHTML = elapsed;
 
-      if(moves >= 6 && moves <10){
-        document.getElementById('starRating').innerHTML= "Rating: &#9733 &#9733 &#9733";}
-      else if(moves >= 10 && moves <14){
-        document.getElementById('starRating').innerHTML= "Rating: &#9733 &#9733 &#9734";}
-      else if(moves > 14){
-        document.getElementById('starRating').innerHTML= "Rating: &#9733 &#9734 &#9734";}
+    if(moves >= 6 && moves <10){
+      document.getElementById('starRating').innerHTML= "Rating: &#9733 &#9733 &#9733";
+    }else if(moves >= 10 && moves <14){
+      document.getElementById('starRating').innerHTML= "Rating: &#9733 &#9733 &#9734";
+    }else if(moves => 14){
+      document.getElementById('starRating').innerHTML= "Rating: &#9733 &#9734 &#9734";
+    }
 }
 ```
 
@@ -721,24 +749,28 @@ function getImages(manifestUrl) {
 }
 ```
 
-Wie im JSFiddle wird über die einzelnen Canvases des Manifests iteriert. Diesmal allerdings, wird das Array mit einem Objekt bestehend aus der URL und dem Index gefüllt. Wird jetzt diese Funktion am Anfang der _game.js_ aufgerufen, werden anstelle der Bilder aus dem img-Ordner, Bilder von Museumsobjekten angezeigt. Natürlich muss die _manifestUrl_ mit übergeben werden.
+Wie im JSFiddle wird über die einzelnen Canvases des Manifests iteriert. Diesmal allerdings, wird das Array mit einem Objekt, bestehend aus der URL und dem Index gefüllt. Wird jetzt diese Funktion am Anfang der _game.js_ aufgerufen, werden anstelle der Bilder aus dem img-Ordner, Bilder von Museumsobjekten angezeigt. Natürlich muss eine URL als Parameter übergeben werden, z.B.
 
-Allerdings stimmt jetzt nicht mehr der _imgPath_ in der Funktion _createFoundPairElement_ zum anzeigen gefundener Paare auf der rechten Seite.
+```javascript
+  getImages('https://download.mediasphere.museumfuernaturkunde.berlin/data/insekten_manifest.json');
 
-Dazu wird die Funktion _handleClick_  in der Datei _handler.js_ erweitert:
+```
+Wenn jetzt eine runde gespielt wird, fällt auf, dass an der Seite kein Bild des gefundenen Paars mehr gezwigt wird.
+Das liegt daran, dass der _imgPath_ in der Funktion _createFoundPairElement_ jetzt nicht mehr stimmt. Zuvor wurde der Name der Bilddatei aus dem Dataset geholt. Schaut man im Browser in den Inspektor, sieht man, dass im _data-name_-Attribut jetzt der Index gespeichert wird. Die URL zum Bild muss aus dem _style_ genauer gesagt dem backgroundImage des HTML-Elements geholt werden, dazu werden die folgenden - in Fett dargestellten - Zeilen in _handleClick_ hinzugefügt und _handlePairs_ mit dem entsprechenden Argument aufgerufen:
+
 
 ```javascript
 ...
   incrementPairs();
-  let imgDiv = selectedElement.nextElementSibling
-  let style = (imgDiv.currentStyle || window.getComputedStyle(imgDiv, false));
-  let imgPath = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-  handlePairs(imgPath)
+  **let imgDiv = selectedElement.nextElementSibling**
+  **let style = (imgDiv.currentStyle || window.getComputedStyle(imgDiv, false));**
+  **let imgPath = style.backgroundImage.slice(4, -1).replace(/"/g, "");**
+  **handlePairs(imgPath);**
   return;
 ...
 ```
 
-In _createFoundPairElement_ kann der Parameter dann direkt dem _cardImage.style.backgroundImage_ mit \`url(${imgPath})\` übergeben werden. Die Zeile `let imgPath = '../img/'+name+'.jpg';` kann gelöscht werden.
+In _createFoundPairElement_ kann der Parameter dann direkt dem _cardImage.style.backgroundImage_ mit \`url(${name})\` übergeben werden. Die Zeile `let imgPath = '../img/'+name+'.jpg';` kann gelöscht werden, da der gesamte Pfad bereits in der Variable _name_ enthalten ist.
 
 ### Manifest Auswahl
 
@@ -753,7 +785,7 @@ Um zwischen den Bildersets wählen zu können, wird dem HTML ein _form_ Element 
   <input type="radio" name="image_set" id="ehrenberg" onclick = "setManifest('ehrenberg')">Ehrenberg zeichnungen
 </form>
 ```
-Wird einer dieser Radio Buttons angeklickt, wird die Funktion _setManifest_ aufgerufen, welche wiederum lediglich _getImages_ mit der gewählten URL aufruft.
+Wird einer dieser Radio Buttons angeklickt, wird die Funktion _setManifest_ aufgerufen, welche wiederum  _getImages_ mit der gewählten URL aufruft.
 
 ```javascript
 function setManifest(manifest){
@@ -761,7 +793,7 @@ function setManifest(manifest){
 }
 ```
 
-Die URLs zu den Manifesten werden in einem Objekt zu beginn der _game.js_ definiert:
+Die URLs zu den Manifesten werden in einem konstanten Objekt zu beginn der _game.js_ definiert:
 
 ```javascript
 const MANIFESTE = {
@@ -771,8 +803,22 @@ const MANIFESTE = {
   mineralien: "https://download.mediasphere.museumfuernaturkunde.berlin/data/mineralien_manifest.json"
 }
 ```
+Das Schlüsselwort _const_ besagt, dass der Wert dieser Variablen nicht verändert werden kann. Die einzelnen Eigenschaften eines konstanten Objekts allerdings, können verändert werden.
+
  Die _getImages_ Funktion kann nun initial mit einem Wert aus dem _MANIFESTE_-Objekt aufgerufen werden.
 
+```javascript
+getImages(MANIFESTE['insekten']);
+```
+Auf Eigenschaften eines Objekts kann auf zwei Arten zugegriffen werden:
+
+_**objektName.eigenschaftsName**_
+
+Oder:
+
+_**objektName["eigenschaftsName"]**_
+
+Beachtet die *Anführungszeichen* bei der zweiten Methode.
 
 ## Zusatz: Klassen
 
