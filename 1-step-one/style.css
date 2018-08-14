@@ -118,8 +118,7 @@ body {
 }
 
 .disabled {
-    pointer-events: none;
-    opacity: 1;
+    pointer-events: none;    
 }
 
 .timer {
